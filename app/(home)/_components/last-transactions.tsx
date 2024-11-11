@@ -4,8 +4,8 @@ import { ScrollArea } from "@/app/_components/ui/scroll-area";
 import { TRANSACTION_PAYMENT_METHOD_ICONS } from "@/app/_constants/transactions";
 import { formatCurrency } from "@/app/_utils/currency";
 import { Transaction, TransactionTypes } from "@prisma/client";
-import { Link } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface LastTransactionsProps {
   lastTransactions: Transaction[];
