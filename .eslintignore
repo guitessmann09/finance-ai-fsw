@@ -2,3 +2,4 @@ tailwind.config.ts
 calendar.tsx
 command.tsx
 input.tsx
+chart.tsx
