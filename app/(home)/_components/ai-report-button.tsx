@@ -11,9 +11,30 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/app/_components/ui/dialog";
-import { BotIcon } from "lucide-react";
+import { BotIcon, Loader2Icon } from "lucide-react";
+import { generateAiReport } from "../_actions/generate-ai-report";
+import { useState } from "react";
+import { ScrollArea } from "@/app/_components/ui/scroll-area";
+import Markdown from "react-markdown";
+interface AiReportButtonProps {
+  month: string;
+}
 
-const AiReportButton = () => {
+const AiReportButton = ({ month }: AiReportButtonProps) => {
+  const [report, setReport] = useState<string | null>(null);
+  const [reportIsLoading, setReportIsLoading] = useState(false);
+  const handleGenerateReportCLick = async () => {
+    try {
+      setReportIsLoading(true);
+      const aiReport = await generateAiReport({ month });
+      setReport(aiReport);
+      await generateAiReport({ month });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setReportIsLoading(false);
+    }
+  };
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -29,11 +50,20 @@ const AiReportButton = () => {
             sobre suas finanças.
           </DialogDescription>
         </DialogHeader>
+        <ScrollArea className="prose max-h-[450px] text-white prose-h3:text-white prose-h4:text-white prose-strong:text-white">
+          <Markdown>{report}</Markdown>
+        </ScrollArea>
         <DialogFooter>
           <DialogClose asChild>
             <Button variant="ghost">Cancelar</Button>
           </DialogClose>
-          <Button>Gerar relatório</Button>
+          <Button
+            onClick={handleGenerateReportCLick}
+            disabled={reportIsLoading}
+          >
+            {reportIsLoading && <Loader2Icon className="animate-spin" />}
+            Gerar relatório
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
