@@ -1,32 +1,45 @@
-Arquitetura do Sistema
-O Finance AI é um SaaS inovador focado na gestão financeira inteligente, com ênfase em integração de IA para suporte analítico e previsões.
+# Finance AI  
 
-Front-end:
-Construído com Next.js, utilizando renderização híbrida (SSG e SSR) para garantir desempenho e SEO aprimorado. O design responsivo é implementado com Tailwind CSS, enquanto componentes personalizados são criados com ShadCN, garantindo uma experiência de usuário fluida e moderna.
+Finance AI é um SaaS inovador projetado para ajudar usuários a gerenciar suas finanças de forma inteligente, utilizando integração com inteligência artificial para análises e relatórios personalizados.  
 
-Back-end:
-O back-end, implementado no mesmo ambiente de Next.js, é integrado com PostgreSQL como banco de dados relacional, gerenciado através do ORM Prisma. Essa abordagem oferece consultas eficientes, mapeamento relacional e manutenção simplificada do esquema de dados.
+## 🚀 **Tecnologias Utilizadas**  
 
-Funcionalidades de Integração com IA
-Uma das principais funcionalidades do Finance AI é a integração com o ChatGPT, que analisa os dados financeiros do usuário armazenados no PostgreSQL. Com base nessa análise, o sistema:
+- **Front-end**:  
+  - [Next.js](https://nextjs.org/) - Framework para aplicações React com renderização híbrida (SSG/SSR).  
+  - [Tailwind CSS](https://tailwindcss.com/) - Framework CSS para design responsivo e eficiente.  
+  - [ShadCN](https://shadcn.dev/) - Biblioteca de componentes personalizados para interfaces modernas.  
 
-Gera relatórios detalhados sobre a saúde financeira, incluindo padrões de despesas, receitas e economias.
-Sugere ações para melhoria da gestão financeira, como otimização de gastos ou oportunidades de investimento.
-Oferece previsões personalizadas com base no histórico de dados.
-Essa funcionalidade é implementada por meio de APIs conectadas ao modelo GPT, utilizando prompts customizados que adaptam as respostas ao perfil do usuário.
+- **Back-end**:  
+  - API Routes do Next.js para lógica server-side.  
+  - Banco de dados **PostgreSQL**, gerenciado com **Prisma** como ORM para consultas e mapeamento relacional.  
 
-Outras Funcionalidades Principais
+- **Autenticação e Pagamentos**:  
+  - [Clerk](https://clerk.dev/) - Sistema completo de autenticação e gerenciamento de usuários.  
+  - [Stripe](https://stripe.com/) - Gateway de pagamentos para assinaturas e transações.  
 
-Gestão de Assinaturas e Pagamentos:
-Integrado com o Stripe para gerenciamento de assinaturas, cobrança automática e relatórios financeiros.
-Sistema de Autenticação Seguro:
-Clerk é utilizado para autenticação de múltiplos fatores, com suporte a login por e-mail, redes sociais e mais.
-Dashboards Dinâmicos:
-Visualização de dados financeiros com gráficos e tabelas interativas.
-Pontos de Destaque Tecnológico
+- **Integração com IA**:  
+  - [ChatGPT](https://openai.com/chatgpt) - Geração de relatórios financeiros detalhados e personalizados.  
 
-IA Personalizada: Integração com ChatGPT para suporte analítico em tempo real.
-Banco de Dados Relacional: PostgreSQL gerido pelo Prisma, garantindo escalabilidade e segurança dos dados.
-Interface Moderna: Uso de ShadCN para criação de componentes visualmente consistentes e customizados.
-Resumo
-O Finance AI combina tecnologias modernas com inteligência artificial para fornecer aos usuários insights valiosos sobre sua saúde financeira. Com uma stack robusta e foco em personalização, é uma ferramenta poderosa para quem busca melhorar a gestão de finanças.
+---
+
+## ✨ **Principais Funcionalidades**  
+
+### 🔍 **Relatórios com Integração de IA**  
+- Geração de relatórios detalhados sobre a **saúde financeira** do usuário, com insights baseados em padrões de receita, despesas e economias.  
+- Sugestões personalizadas para melhoria da gestão financeira, incluindo recomendações de otimização de gastos e oportunidades de investimento.  
+- Previsões baseadas em dados históricos, gerados por meio da integração com o **ChatGPT**.  
+
+### 💳 **Gestão de Assinaturas e Pagamentos**  
+- Integração com **Stripe** para gerenciamento de assinaturas, cobrança automática e relatórios de transações.  
+
+### 🔐 **Autenticação Segura**  
+- Implementação com **Clerk**, oferecendo suporte a login por e-mail, redes sociais e autenticação multifator (MFA).  
+
+### 📊 **Dashboards Dinâmicos**  
+- Visualização de dados financeiros com gráficos e tabelas interativas, projetados para fácil interpretação e ação.
+
+---
+
+## 🌐 **Acesse o Site**  
+Você pode acessar a aplicação ao vivo em:  
+[https://finance-ai-fsw.vercel.app](https://finance-ai-fsw.vercel.app) 
