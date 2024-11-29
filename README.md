@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Arquitetura do Sistema
+O Finance AI é um SaaS inovador focado na gestão financeira inteligente, com ênfase em integração de IA para suporte analítico e previsões.
 
-## Getting Started
+Front-end:
+Construído com Next.js, utilizando renderização híbrida (SSG e SSR) para garantir desempenho e SEO aprimorado. O design responsivo é implementado com Tailwind CSS, enquanto componentes personalizados são criados com ShadCN, garantindo uma experiência de usuário fluida e moderna.
 
-First, run the development server:
+Back-end:
+O back-end, implementado no mesmo ambiente de Next.js, é integrado com PostgreSQL como banco de dados relacional, gerenciado através do ORM Prisma. Essa abordagem oferece consultas eficientes, mapeamento relacional e manutenção simplificada do esquema de dados.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Funcionalidades de Integração com IA
+Uma das principais funcionalidades do Finance AI é a integração com o ChatGPT, que analisa os dados financeiros do usuário armazenados no PostgreSQL. Com base nessa análise, o sistema:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Gera relatórios detalhados sobre a saúde financeira, incluindo padrões de despesas, receitas e economias.
+Sugere ações para melhoria da gestão financeira, como otimização de gastos ou oportunidades de investimento.
+Oferece previsões personalizadas com base no histórico de dados.
+Essa funcionalidade é implementada por meio de APIs conectadas ao modelo GPT, utilizando prompts customizados que adaptam as respostas ao perfil do usuário.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Outras Funcionalidades Principais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Gestão de Assinaturas e Pagamentos:
+Integrado com o Stripe para gerenciamento de assinaturas, cobrança automática e relatórios financeiros.
+Sistema de Autenticação Seguro:
+Clerk é utilizado para autenticação de múltiplos fatores, com suporte a login por e-mail, redes sociais e mais.
+Dashboards Dinâmicos:
+Visualização de dados financeiros com gráficos e tabelas interativas.
+Pontos de Destaque Tecnológico
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+IA Personalizada: Integração com ChatGPT para suporte analítico em tempo real.
+Banco de Dados Relacional: PostgreSQL gerido pelo Prisma, garantindo escalabilidade e segurança dos dados.
+Interface Moderna: Uso de ShadCN para criação de componentes visualmente consistentes e customizados.
+Resumo
+O Finance AI combina tecnologias modernas com inteligência artificial para fornecer aos usuários insights valiosos sobre sua saúde financeira. Com uma stack robusta e foco em personalização, é uma ferramenta poderosa para quem busca melhorar a gestão de finanças.
